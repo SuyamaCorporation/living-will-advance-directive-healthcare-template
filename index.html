@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>リビングウィル・事前指示書テンプレート</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-teal-50 min-h-screen">
+<div class="max-w-3xl mx-auto p-4">
+  <div class="bg-teal-700 text-white rounded-xl p-5 mb-6">
+    <h1 class="text-2xl font-bold mb-1">リビングウィル・事前指示書テンプレート</h1>
+    <p class="text-teal-200 text-sm">終末期ケアに関するご自身の意思を事前に記録するためのテンプレートです。</p>
+    <div class="mt-3 bg-teal-800 rounded-lg p-3 text-xs text-teal-100">
+      <strong>⚠ 注意:</strong> このツールは情報提供目的のテンプレートです。法的効力を持たせるには、公証人・弁護士に相談の上、各都道府県の様式に準拠した正式な書面を作成してください。
+    </div>
+  </div>
+
+  <!-- 本人情報 -->
+  <div class="bg-white rounded-xl shadow p-5 mb-5">
+    <h2 class="font-semibold text-gray-700 mb-4 text-lg">1. 本人情報</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label for="full-name" class="text-xs text-gray-500 block mb-1">氏名</label>
+        <input id="full-name" type="text" placeholder="山田 太郎" aria-label="氏名"
+          class="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-400">
+      </div>
+      <div>
+        <label for="birthdate" class="text-xs text-gray-500 block mb-1">生年月日</label>
+        <input id="birthdate" type="date" aria-label="生年月日"
+          class="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-400">
+      </div>
+      <div>
+        <label for="address" class="text-xs text-gray-500 block mb-1">住所</label>
+        <input id="address" type="text" placeholder="東京都〇〇区..." aria-label="住所"
+          class="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-400">
+      </div>
+      <div>
+        <label for="doc-date" class="text-xs text-gray-500 block mb-1">作成日</label>
+        <input id="doc-date" type="date" aria-label="作成日"
+          class="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-400">
+      </div>
+    </div>
+  </div>
+
+  <!-- 終末期ケア意思 -->
+  <div class="bg-white rounded-xl shadow p-5 mb-5">
+    <h2 class="font-semibold text-gray-700 mb-4 text-lg">2. 終末期ケアに関する意思</h2>
+
+    <div class="space-y-4">
+      <div class="border rounded-lg p-4">
+        <h3 class="font-medium text-gray-700 mb-3">延命措置について</h3>
+        <div class="space-y-2">
+          <label class="flex items-start gap-3 cursor-pointer">
+            <input type="radio" name="life-support" value="refuse-all" aria-label="すべての延命措置を拒否"
+              class="mt-1 text-teal-600">
+            <span class="text-sm text-gray-700">すべての延命措置を拒否する（人工呼吸器・胃ろう等を含む）</span>
+          </label>
+          <label class="flex items-start gap-3 cursor-pointer">
+            <input type="radio" name="life-support" value="limited" aria-label="一定条件下で延命措置を制限"
+              class="mt-1 text-teal-600">
+            <span class="text-sm text-gray-700">回復の見込みがない場合のみ延命措置を制限する</span>
+          </label>
+          <label class="flex items-start gap-3 cursor-pointer">
+            <input type="radio" name="life-support" value="accept-all" aria-label="すべての延命措置を受ける"
+              class="mt-1 text-teal-600">
+            <span class="text-sm text-gray-700">可能な限りすべての延命措置を受ける</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="border rounded-lg p-4">
+        <h3 class="font-medium text-gray-700 mb-3">DNR（蘇生術不要）指示</h3>
+        <div class="space-y-2">
+          <label class="flex items-start gap-3 cursor-pointer">
+            <input type="radio" name="dnr" value="yes" aria-label="DNR指示あり"
+              class="mt-1 text-teal-600">
+            <span class="text-sm text-gray-700">心停止・呼吸停止時の蘇生術（CPR）を行わない（DNR）</span>
+          </label>
+          <label class="flex items-start gap-3 cursor-pointer">
+            <input type="radio" name="dnr" value="no" aria-label="DNR指示なし"
+              class="mt-1 text-teal-600">
+            <span class="text-sm text-gray-700">心停止・呼吸停止時の蘇生術を行う</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="border rounded-lg p-4">
+        <h3 class="font-medium text-gray-700 mb-3">緩和ケア</h3>
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" id="palliative" aria-label="痛みや苦痛を和らげる緩和ケアを希望"
+            class="mt-1 text-teal-600">
+          <span class="text-sm text-gray-700">痛みや苦痛を和らげる緩和ケア（ホスピスケア）を希望する</span>
+        </label>
+        <label class="flex items-start gap-3 cursor-pointer mt-2">
+          <input type="checkbox" id="home-care" aria-label="可能であれば自宅または施設での療養を希望"
+            class="mt-1 text-teal-600">
+          <span class="text-sm text-gray-700">可能であれば自宅または施設での療養を希望する</span>
+        </label>
+      </div>
+
+      <div class="border rounded-lg p-4">
+        <label for="other-wishes" class="font-medium text-gray-700 block mb-2">その他の意思・特記事項</label>
+        <textarea id="other-wishes" rows="3" aria-label="その他の意思・特記事項"
+          placeholder="宗教的・文化的配慮、特定の治療に関する希望など"
+          class="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-400"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- 代理人情報 -->
+  <div class="bg-white rounded-xl shadow p-5 mb-5">
+    <h2 class="font-semibold text-gray-700 mb-4 text-lg">3. 医療代理人</h2>
+    <p class="text-xs text-gray-500 mb-3">意思決定能力を失った場合に医療判断を委任する方の情報を記入してください。</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label for="proxy-name" class="text-xs text-gray-500 block mb-1">代理人氏名</label>
+        <input id="proxy-name" type="text" placeholder="山田 花子" aria-label="代理人氏名"
+          class="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-400">
+      </div>
+      <div>
+        <label for="proxy-relation" class="text-xs text-gray-500 block mb-1">続柄</label>
+        <input id="proxy-relation" type="text" placeholder="配偶者、長男、etc." aria-label="続柄"
+          class="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-400">
+      </div>
+      <div>
+        <label for="proxy-phone" class="text-xs text-gray-500 block mb-1">連絡先電話番号</label>
+        <input id="proxy-phone" type="tel" placeholder="090-XXXX-XXXX" aria-label="代理人連絡先"
+          class="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-400">
+      </div>
+      <div>
+        <label for="proxy-email" class="text-xs text-gray-500 block mb-1">連絡先メールアドレス</label>
+        <input id="proxy-email" type="email" placeholder="hanako@example.com" aria-label="代理人メールアドレス"
+          class="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-400">
+      </div>
+    </div>
+  </div>
+
+  <!-- チェックリスト -->
+  <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-5">
+    <h2 class="font-semibold text-amber-800 mb-3 text-lg">法的確認チェックリスト</h2>
+    <div class="space-y-2 text-sm text-amber-900">
+      <div class="flex items-start gap-2"><span>□</span><span>本人が精神的に健全な状態で自発的に作成していること</span></div>
+      <div class="flex items-start gap-2"><span>□</span><span>本人の署名・捺印が必要</span></div>
+      <div class="flex items-start gap-2"><span>□</span><span>証人（2名以上・相続人・医療従事者を除く）の署名が推奨</span></div>
+      <div class="flex items-start gap-2"><span>□</span><span>主治医・かかりつけ医への事前共有が推奨</span></div>
+      <div class="flex items-start gap-2"><span>□</span><span>定期的な見直し（少なくとも5年ごと）を推奨</span></div>
+      <div class="flex items-start gap-2"><span>□</span><span>コピーを医療代理人・主治医・保管場所に配布</span></div>
+    </div>
+  </div>
+
+  <div class="flex gap-3 flex-wrap mb-6">
+    <button onclick="exportMarkdown()" class="bg-teal-700 text-white px-5 py-2 rounded-lg text-sm hover:bg-teal-800">Markdownエクスポート</button>
+    <button onclick="clearAll()" class="bg-red-100 text-red-700 px-5 py-2 rounded-lg text-sm hover:bg-red-200">リセット</button>
+  </div>
+
+  <div id="md-output" class="hidden bg-gray-900 text-green-300 rounded-xl p-4 text-xs font-mono whitespace-pre-wrap overflow-x-auto"></div>
+</div>
+
+<script>
+const FIELDS = ['full-name','birthdate','address','doc-date','other-wishes','proxy-name','proxy-relation','proxy-phone','proxy-email'];
+
+function loadState() {
+  try {
+    const s = localStorage.getItem('living-will');
+    if (!s) return;
+    const d = JSON.parse(s);
+    FIELDS.forEach(id => { const el = document.getElementById(id); if (el && d[id] !== undefined) el.value = d[id]; });
+    ['life-support','dnr'].forEach(name => {
+      if (d[name]) {
+        const r = document.querySelector(`input[name="${name}"][value="${d[name]}"]`);
+        if (r) r.checked = true;
+      }
+    });
+    ['palliative','home-care'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el && d[id]) el.checked = d[id];
+    });
+  } catch(e) {}
+}
+
+function saveState() {
+  const d = {};
+  FIELDS.forEach(id => { const el = document.getElementById(id); if (el) d[id] = el.value; });
+  ['life-support','dnr'].forEach(name => {
+    const r = document.querySelector(`input[name="${name}"]:checked`);
+    d[name] = r ? r.value : '';
+  });
+  ['palliative','home-care'].forEach(id => { const el = document.getElementById(id); d[id] = el ? el.checked : false; });
+  localStorage.setItem('living-will', JSON.stringify(d));
+}
+
+FIELDS.forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('input', saveState);
+});
+document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(el => el.addEventListener('change', saveState));
+
+function getLSLabel(val) {
+  if (val === 'refuse-all') return 'すべての延命措置を拒否する';
+  if (val === 'limited') return '回復の見込みがない場合のみ延命措置を制限する';
+  if (val === 'accept-all') return 'すべての延命措置を受ける';
+  return '（未選択）';
+}
+
+function exportMarkdown() {
+  const g = id => { const el = document.getElementById(id); return el ? el.value.trim() : ''; };
+  const lsR = document.querySelector('input[name="life-support"]:checked');
+  const dnrR = document.querySelector('input[name="dnr"]:checked');
+  let md = `# リビングウィル・事前指示書\n\n`;
+  md += `> このドキュメントはリビングウィルテンプレートから生成されました。法的効力を持たせるには公証人・弁護士に相談してください。\n\n`;
+  md += `## 1. 本人情報\n\n`;
+  md += `| 項目 | 内容 |\n|------|------|\n`;
+  md += `| 氏名 | ${g('full-name') || '（未入力）'} |\n`;
+  md += `| 生年月日 | ${g('birthdate') || '（未入力）'} |\n`;
+  md += `| 住所 | ${g('address') || '（未入力）'} |\n`;
+  md += `| 作成日 | ${g('doc-date') || '（未入力）'} |\n\n`;
+  md += `## 2. 終末期ケアに関する意思\n\n`;
+  md += `**延命措置**: ${getLSLabel(lsR ? lsR.value : '')}\n\n`;
+  md += `**DNR指示**: ${dnrR ? (dnrR.value === 'yes' ? '蘇生術不要（DNR）' : '蘇生術を行う') : '（未選択）'}\n\n`;
+  const pal = document.getElementById('palliative');
+  const hc = document.getElementById('home-care');
+  if (pal && pal.checked) md += `**緩和ケア**: 希望する\n\n`;
+  if (hc && hc.checked) md += `**療養場所**: 自宅または施設を希望\n\n`;
+  const ow = g('other-wishes');
+  if (ow) md += `**特記事項**: ${ow}\n\n`;
+  md += `## 3. 医療代理人\n\n`;
+  md += `| 項目 | 内容 |\n|------|------|\n`;
+  md += `| 氏名 | ${g('proxy-name') || '（未入力）'} |\n`;
+  md += `| 続柄 | ${g('proxy-relation') || '（未入力）'} |\n`;
+  md += `| 電話 | ${g('proxy-phone') || '（未入力）'} |\n`;
+  md += `| メール | ${g('proxy-email') || '（未入力）'} |\n\n`;
+  md += `---\n\n本人署名: _______________　　日付: _______________\n`;
+  const el = document.getElementById('md-output');
+  el.textContent = md;
+  el.classList.remove('hidden');
+  navigator.clipboard && navigator.clipboard.writeText(md);
+}
+
+function clearAll() {
+  if (!confirm('全データをリセットしますか？')) return;
+  localStorage.removeItem('living-will');
+  FIELDS.forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
+  document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(el => { el.checked = false; });
+  document.getElementById('md-output').classList.add('hidden');
+}
+
+loadState();
+</script>
+</body>
+</html>
